@@ -1,0 +1,26 @@
+Package: hypothesis
+Type: Package
+Title: R Wrapper for hypothes.is
+Version: 1.0.0
+Authors@R: 
+    c(person('Krystian', 'Igras', 
+             email = 'krystian8207@gmail.com', 
+             role = c('cre', 'aut')),
+      person('Adam', 'Foryś',
+             role = "ctb"),
+      person("Hypothes.is Project and contributors", role = "cph", comment = "hi_embed.js"))
+Maintainer: Krystian Igras <krystian8207@gmail.com>
+Description: Add, share and manage annotations for Shiny applications and R Markdown documents via hypothes.is.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    magrittr,
+    glue,
+    htmlwidgets,
+    jsonlite,
+    htmltools,
+    purrr
+Suggests:
+    shiny
+RoxygenNote: 7.2.3
