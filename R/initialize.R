@@ -42,7 +42,7 @@ make_verbatim <- function(x, which = NULL) {
 #' Branding configuration
 #'
 #' Configuration for custom annotations branding.
-#' See more at: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/#cmdoption-arg-branding}{branding}.
+#' See more at: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-branding}{branding}.
 #'
 #' @param accentColor Css-valid color value defining sidebar accent.
 #' @param appBackgroundColor Css-valid color value defining sidebar background.
@@ -65,7 +65,7 @@ hypothesisBranding <- function(accentColor, appBackgroundColor, ctaBackgroundCol
 #' Hypothesis Service Configuration
 #'
 #' A list of alternative annotation services which the client should connect.
-#' For more information visit: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/#cmdoption-arg-services}{services}.
+#' For more information visit: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-services}{services}.
 #'
 #' @param apiUrl,authority,grantToken,allowLeavingGroups,enableShareLinks,groups,icon,onLoginRequest,onLogoutRequest,onSignupRequest,onProfileRequest,onHelpRequest Arguments defining external hypothesis services.
 #' @export
@@ -125,7 +125,7 @@ to_list <- function(x, element) {
 #'   See \link{hypothesisBranding} for possible options.
 #' @param sidebarAppUrl,onLayoutChange,services,enableExperimentalNewNoteButton,usernameUrl,externalContainerSelector,focus,requestConfigFromFrame,assetRoot,notebookAppUrl,enableShareLinks Extra
 #'   arguments used for external services configuration and assets configuration.
-#'   Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/}{config} for more details.
+#'   Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html}{config} for more details.
 #' @param ... Extra arguments passed to client configuration.
 #'
 #' @export

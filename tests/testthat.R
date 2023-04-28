@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-pkgload::load_all()
+library(hypothesis)
 
 test_check("hypothesis")

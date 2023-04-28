@@ -37,7 +37,7 @@ See \link{hypothesisBranding} for possible options.}
 
 \item{sidebarAppUrl, onLayoutChange, services, enableExperimentalNewNoteButton, usernameUrl, externalContainerSelector, focus, requestConfigFromFrame, assetRoot, notebookAppUrl, enableShareLinks}{Extra
 arguments used for external services configuration and assets configuration.
-Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/}{config} for more details.}
+Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html}{config} for more details.}
 
 \item{...}{Extra arguments passed to client configuration.}
 }

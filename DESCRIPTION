@@ -1,6 +1,6 @@
 Package: hypothesis
 Type: Package
-Title: R Wrapper for hypothes.is
+Title: R Wrapper for Hypothes.is
 Version: 1.0.0
 Authors@R: 
     c(person('Krystian', 'Igras', 
