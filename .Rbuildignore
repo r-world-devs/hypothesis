@@ -6,3 +6,4 @@ README.Rmd
 .gitlab-ci.yml
 staged-dependencies-action/.github
 examples
+meta_data.yaml
