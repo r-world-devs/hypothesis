@@ -24,5 +24,5 @@ hypothesisServices(
 }
 \description{
 A list of alternative annotation services which the client should connect.
-For more information visit: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/#cmdoption-arg-services}{services}.
+For more information visit: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-services}{services}.
 }

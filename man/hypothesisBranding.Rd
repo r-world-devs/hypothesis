@@ -28,5 +28,5 @@ hypothesisBranding(
 }
 \description{
 Configuration for custom annotations branding.
-See more at: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config/#cmdoption-arg-branding}{branding}.
+See more at: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-branding}{branding}.
 }

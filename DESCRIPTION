@@ -1,6 +1,6 @@
 Package: hypothesis
 Type: Package
-Title: R Wrapper for hypothes.is
+Title: R Wrapper for Hypothes.is
 Version: 1.0.0
 Authors@R: 
     c(person('Krystian', 'Igras', 
@@ -22,5 +22,7 @@ Imports:
     htmltools,
     purrr
 Suggests:
-    shiny
+    shiny,
+    testthat (>= 3.0.0)
 RoxygenNote: 7.2.3
+Config/testthat/edition: 3
