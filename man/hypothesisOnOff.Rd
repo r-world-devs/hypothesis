@@ -15,6 +15,9 @@ hypothesisOnOff(
 
 \item{labelShow, labelHide}{Label to be shown in the button when annotations are hidden and shown respectively.}
 }
+\value{
+A 'button' shiny.tag object, responsible for enabling/disabling of the package functionality.
+}
 \description{
 Generates button that allows to turn on and turn off annotations tool.
 }

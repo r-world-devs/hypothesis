@@ -41,6 +41,9 @@ Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config
 
 \item{...}{Extra arguments passed to client configuration.}
 }
+\value{
+A list of class 'shiny.tag.list' storing the package JS/CSS dependencies.
+}
 \description{
 Function used to initialize hypothesis annotations in Shiny app or R Markdown document.
 }

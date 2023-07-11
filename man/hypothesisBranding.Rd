@@ -26,6 +26,9 @@ hypothesisBranding(
 
 \item{annotationFontFamily}{Css-valid color value defining font family used for annotation popup.}
 }
+\value{
+Named list object storing provided arguments.
+}
 \description{
 Configuration for custom annotations branding.
 See more at: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-branding}{branding}.

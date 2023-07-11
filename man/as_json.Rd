@@ -9,6 +9,10 @@ as_json(x)
 \arguments{
 \item{x}{Character storing JS code or object.}
 }
+\value{
+A character of class 'json'.
+The output can be used to store bare JS element withing JSON object.
+}
 \description{
 Allows to include raw JS code in JSON object.
 }
@@ -27,5 +31,4 @@ jsonlite::toJSON(
   list(fun = as_json("function(x) {console.log(x);}")),
   auto_unbox = TRUE, json_verbatim = TRUE
 )
-
 }

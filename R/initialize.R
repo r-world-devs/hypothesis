@@ -25,7 +25,8 @@ drop_nulls <- function(x) {
 #'   list(fun = as_json("function(x) {console.log(x);}")),
 #'   auto_unbox = TRUE, json_verbatim = TRUE
 #' )
-#'
+#' @return A character of class 'json'.
+#' The output can be used to store bare JS element withing JSON object.
 #' @export
 as_json <- function(x) {
   class(x) <- c("json", class(x))
@@ -50,6 +51,7 @@ make_verbatim <- function(x, which = NULL) {
 #' @param ctaTextColor Css-valid color value defining font color used inside of the call-to-action buttons.
 #' @param selectionFontFamily Css-valid color value defining font family used for annotation selection popup.
 #' @param annotationFontFamily Css-valid color value defining font family used for annotation popup.
+#' @return Named list object storing provided arguments.
 #' @export
 hypothesisBranding <- function(accentColor, appBackgroundColor, ctaBackgroundColor,
                                ctaTextColor, selectionFontFamily, annotationFontFamily) {
@@ -68,6 +70,7 @@ hypothesisBranding <- function(accentColor, appBackgroundColor, ctaBackgroundCol
 #' For more information visit: \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html#cmdoption-arg-services}{services}.
 #'
 #' @param apiUrl,authority,grantToken,allowLeavingGroups,enableShareLinks,groups,icon,onLoginRequest,onLogoutRequest,onSignupRequest,onProfileRequest,onHelpRequest Arguments defining external hypothesis services.
+#' @return Named list object storing provided arguments.
 #' @export
 hypothesisServices <- function(apiUrl, authority, grantToken, allowLeavingGroups, enableShareLinks, groups, icon,
                                onLoginRequest, onLogoutRequest, onSignupRequest, onProfileRequest, onHelpRequest) {
@@ -92,6 +95,7 @@ hypothesisServices <- function(apiUrl, authority, grantToken, allowLeavingGroups
 #' @param initShow Define initial state of annotations. When FALSE, annotations are turned off.
 #' @param labelShow,labelHide Label to be shown in the button when annotations are hidden and shown respectively.
 #'
+#' @return A 'button' shiny.tag object, responsible for enabling/disabling of the package functionality.
 #' @export
 hypothesisOnOff <- function(initShow = TRUE, labelShow = "Enable Annotations",
                             labelHide = "Disable Annotations") {
@@ -128,6 +132,7 @@ to_list <- function(x, element) {
 #'   Visit \href{https://h.readthedocs.io/projects/client/en/latest/publishers/config.html}{config} for more details.
 #' @param ... Extra arguments passed to client configuration.
 #'
+#' @return A list of class 'shiny.tag.list' storing the package JS/CSS dependencies.
 #' @export
 useHypothesis <- function(openSidebar = TRUE,
                           showHighlights = c("whenSidebarOpen", "always", "never"),
