@@ -1,0 +1,112 @@
+---
+title: "How to use Hypothesis API from R?"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use Hypothesis API from R?}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(hypothesis)
+```
+
+## Introduction
+This vignette provides an overview and usage examples of the `{hypothesis}` R package, which is a wrapper for the Hypothesis API. The package allows you to interact with the Hypothesis annotation platform programmatically.
+
+## Authentication
+Before using the `{hypothesis}` package, you need to obtain an API key from the Hypothesis platform. You can generate an API key by following the instructions:
+
+- Visit the Hypothesis website at https://hypothes.is/ or self-hosted instance.
+- Sign in to your account or create a new account if you don't have one.
+- Once you are signed in, click on your account avatar in the top right corner of the page and select "Account details" from the dropdown menu.
+- In the account settings page, click on the "Developer" tab.
+- Click `Generete your API token`
+
+To set your API key as an environment variable, you can use the Sys.setenv() function:
+
+```r
+Sys.setenv(HYPOTHESIS_API_KEY = "your_api_key")
+```
+
+or set the it in the `.Renviron` file. e.g. `usethis::edit_r_environ()`
+
+## Usage
+
+By default the package is using `https://hypothes.is/api/`, you can modify the host to point to custom Hypothesis instance by specify `HYPOTHESIS_API_PATH` environment variable.
+
+```r
+Sys.setenv(HYPOTHESIS_API_PATH = "https://hypothesis.company.com/api/")
+```
+
+The `{hypothesis}` package provides several functions for interacting with the Hypothesis API. Here, we will demonstrate the usage of some key functions:
+
+```r
+search_annotations()
+```
+
+This function allows you to search for annotations based on various criteria. Here's an example of how to use it:
+
+```r
+library(hypothesis)
+
+# Search for annotations with the keyword "R programming"
+# Check default parameters in function docs
+results <- search_annotations(any = "R programming")
+
+# Print the first 10 annotations
+head(results, 10)
+```
+
+
+The `annotation()` function allows you to perform actions on individual annotations. Here are some examples:
+
+```r
+# To interact with annotation you need to specify correct annotation id. 
+# Fetch annotation details
+annotation_details <- annotation("annotation_id")
+
+# Update an annotation's text
+updated_annotation <- annotation("annotation_id", action = "update", text = "Updated text")
+
+# Flag an annotation
+flagged_annotation <- annotation("annotation_id", action = "flag")
+```
+
+The `get_groups()` function retrieves a list of groups from the Hypothesis platform. Here's an example:
+
+```r
+# Retrieve all groups
+groups <- get_groups(authority = "localhost")
+```
+
+The `group()` function allows you to fetch group details or update group information. Here are some examples:
+
+```r
+# Fetch group details
+group_details <- group("group_id")
+
+# Update group information
+updated_group <- group("group_id", action = "update", name = "Updated Group Name")
+```
+
+The `get_profile()` function fetches the profile information of the currently-authenticated user. Here's an example:
+
+```r
+# Fetch profile information
+profile <- get_profile()
+
+# Print the user's display name
+cat("Display Name:", profile$user_info$display_name, "\n")
+```
+
+## Conclusion
+
+This vignette provided an introduction to the hypothesis R package and demonstrated its usage with the Hypothesis API. You can explore the package further by referring to the package documentation and the official [Hypothesis API documentation](https://h.readthedocs.io/en/latest/api-reference/v1/).
