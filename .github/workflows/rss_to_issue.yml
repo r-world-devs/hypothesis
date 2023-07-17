@@ -1,0 +1,21 @@
+name: rss
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  website-annotations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: rss-issues
+        uses: guilhem/rss-issues-action@0.5.2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          feed: "https://hypothes.is/stream.rss?wildcard_uri=https://r-world-devs.github.io/hypothesis/*"
+          prefix: "[Hypothesis]"
+          characterLimit: "255"
+          dry-run: "false"
+          lastTime: "92h"
+          labels: "pkgdown/Hypothesis"
