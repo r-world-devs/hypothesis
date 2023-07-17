@@ -21,7 +21,7 @@ Imports:
     htmlwidgets,
     jsonlite,
     htmltools,
-    purrr,
+    purrr (>= 1.0.0),
     httr
 Suggests:
     shiny,
