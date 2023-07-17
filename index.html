@@ -16,7 +16,7 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><script src="https://hypothes.is/embed.js" async></script>
 </head>
 <body data-spy="scroll" data-target="#toc">
     
@@ -73,7 +73,7 @@
 <div class="section level1">
 <div class="page-header"><h1 id="hypothesis">hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis"></a>
 </h1></div>
-<p><a href="https://github.com/r-world-devs/hypothesis" class="external-link"><img src="https://img.shields.io/static/v1.svg?label=github.com&amp;message=v.1.0.0&amp;color=ff69b4" alt="version"></a></p>
+<p><a href="https://github.com/r-world-devs/hypothesis" class="external-link"><img src="https://img.shields.io/static/v1.svg?label=github.com&amp;message=v.1.1.0&amp;color=ff69b4" alt="version"></a></p>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
@@ -134,6 +134,22 @@ hypothesis::useHypothesIs()
 <code>`</code>r hypothesisOnOff(TRUE)<code>`</code>
 
 </pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
+</h2>
+<div class="section level3">
+<h3 id="rendering-website">Rendering website<a class="anchor" aria-label="anchor" href="#rendering-website"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Clone gh-pages branch as <code>docs</code> folder:</li>
+</ol>
+<!-- --><div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git clone <span class="sc">-</span>b gh<span class="sc">-</span>pages git<span class="sc">@</span>github.com<span class="sc">:</span>r<span class="sc">-</span>world<span class="sc">-</span>devs<span class="sc">/</span>hypothesis.git docs</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Render website <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>.</li>
+<li>Move to <code>docs</code>, commit and push.</li>
+</ol>
 </div>
 </div>
 <div class="section level2">
