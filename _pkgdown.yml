@@ -1,0 +1,3 @@
+template:
+  includes:
+    in_header: '<script src="https://hypothes.is/embed.js" async></script>'

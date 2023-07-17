@@ -7,4 +7,5 @@ README.Rmd
 staged-dependencies-action/.github
 examples
 meta_data.yaml
+docs/
 .github

@@ -21,7 +21,7 @@ Imports:
     htmlwidgets,
     jsonlite,
     htmltools,
-    purrr,
+    purrr (>= 1.0.0),
     httr
 Suggests:
     shiny,
@@ -29,7 +29,8 @@ Suggests:
     withr,
     mockery,
     knitr,
-    rmarkdown
+    rmarkdown,
+    pkgdown
 RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 VignetteBuilder: knitr

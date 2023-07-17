@@ -87,6 +87,17 @@ hypothesis::useHypothesIs()
 
 </pre>
 
+## Development
+
+### Rendering website
+
+1. Clone gh-pages branch as `docs` folder: 
+```
+git clone -b gh-pages git@github.com:r-world-devs/hypothesis.git docs
+```
+2. Render website `pkgdown::build_site()`.
+3. Move to `docs`, commit and push.
+
 ## Getting help
 
 In a case you found any bugs, have feature request or general question please file an issue at the package [Github](https://github.com/r-world-devs/hypothesis/issues).
