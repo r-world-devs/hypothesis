@@ -1,7 +1,7 @@
 
 # hypothesis
 
-[![version](https://img.shields.io/static/v1.svg?label=github.com&message=v.1.0.0&color=ff69b4)](https://github.com/r-world-devs/hypothesis)
+[![version](https://img.shields.io/static/v1.svg?label=github.com&message=v.1.1.0&color=ff69b4)](https://github.com/r-world-devs/hypothesis)
 
 ## Overview
 
@@ -68,6 +68,19 @@ hypothesis::useHypothesIs()
 <code>&#96</code>r hypothesisOnOff(TRUE)<code>&#96</code>
 
 </pre>
+
+## Development
+
+### Rendering website
+
+1.  Clone gh-pages branch as `docs` folder:
+
+<!-- -->
+
+    git clone -b gh-pages git@github.com:r-world-devs/hypothesis.git docs
+
+2.  Render website `pkgdown::build_site()`.
+3.  Move to `docs`, commit and push.
 
 ## Getting help
 
