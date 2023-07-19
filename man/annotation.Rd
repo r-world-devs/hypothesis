@@ -9,7 +9,7 @@
 \usage{
 annotation(
   annotation_id,
-  action = c("fetch", "update", "delete", "flag", "hide", "show"),
+  action = c("fetch", "update", "delete", "flag", "hide", "show", "create"),
   ...,
   api_path = get_hs_host(),
   api_key = NULL
@@ -39,5 +39,10 @@ annotation("annotation_id", action = "update", text = "updated text")
 annotation("annotation_id", action = "flag")
 annotation("annotation_id", action = "hide")
 annotation("annotation_id", action = "show")
+annotation(
+  action = "create",
+  uri = "https://r-world-devs.github.io/hypothesis/articles/hypothesis-api.html",
+  text = "test"
+)
 }
 }

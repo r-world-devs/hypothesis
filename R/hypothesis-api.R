@@ -128,7 +128,11 @@ search_annotations <- function(
 #' annotation("annotation_id", action = "flag")
 #' annotation("annotation_id", action = "hide")
 #' annotation("annotation_id", action = "show")
-#' annotation(action = "create", uri = "https://r-world-devs.github.io/hypothesis/articles/hypothesis-api.html", text = "test")
+#' annotation(
+#'   action = "create",
+#'   uri = "https://r-world-devs.github.io/hypothesis/articles/hypothesis-api.html",
+#'   text = "test"
+#' )
 #' }
 #' @export
 annotation <- function(

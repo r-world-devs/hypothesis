@@ -9,3 +9,4 @@ examples
 meta_data.yaml
 docs/
 .github
+_pkgdown.yml
