@@ -128,16 +128,24 @@ search_annotations <- function(
 #' annotation("annotation_id", action = "flag")
 #' annotation("annotation_id", action = "hide")
 #' annotation("annotation_id", action = "show")
+#' annotation(action = "create", uri = "https://r-world-devs.github.io/hypothesis/articles/hypothesis-api.html", text = "test")
 #' }
 #' @export
 annotation <- function(
     annotation_id,
-    action = c("fetch", "update", "delete", "flag", "hide", "show"),
+    action = c("fetch", "update", "delete", "flag", "hide", "show", "create"),
     ...,
     api_path = get_hs_host(),
     api_key = NULL
 ) {
   action <- rlang::arg_match(action)
+
+  if (rlang::is_missing(annotation_id)) {
+    if (!identical(action, "create")) {
+      stop("You need to specify annotation_id.")
+    }
+    annotation_id <- ""
+  }
 
   request_type <- switch(
     action,
@@ -146,7 +154,8 @@ annotation <- function(
     "delete" = "DELETE",
     "flag" = "PUT",
     "hide" = "PUT",
-    "show" = "DELETE"
+    "show" = "DELETE",
+    "create" = "POST"
   )
 
   endpoint <- switch(
@@ -154,10 +163,16 @@ annotation <- function(
     "flag" = "annotations/%s/flag",
     "hide" = "annotations/%s/hide",
     "show" = "annotations/%s/hide",
+    "create" = "annotations%s",
     "annotations/%s"
   )
 
-  json_body <- jsonlite::toJSON(list(...), auto_unbox = TRUE)
+  body <- list(...)
+
+  body$text <- jsonlite::unbox(body$text)
+  body$uri <- jsonlite::unbox(body$uri)
+
+  json_body <- jsonlite::toJSON(body)
 
   results <- hs_api_handler(
     body = json_body,
