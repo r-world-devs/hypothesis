@@ -141,7 +141,7 @@ annotation <- function(
 
   if (rlang::is_missing(annotation_id)) {
     if (!identical(action, "create")) {
-      stop("You need to specify annotation_id for all action on existing.")
+      stop("You need to specify annotation_id.")
     }
     annotation_id <- ""
   }
